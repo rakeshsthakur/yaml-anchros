@@ -1,0 +1,27 @@
+# default
+config:
+    test: &configDefault
+        a: default_a
+        b: default_b
+
+management:
+    server.port: 8091
+    endpoints.web:
+        base-path: /
+        exposure.include: info,health,env
+
+    health:
+        diskspace:
+            enabled: false
+health:
+    config:
+        enabled: false
+
+---
+spring:
+    profiles: cutsom
+
+
+config:
+    <<: *configDefault
+        b: custom_b
