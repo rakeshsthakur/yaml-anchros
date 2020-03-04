@@ -12,7 +12,7 @@ management:
 
 ---
 spring:
-    profiles: cutsom
+    profiles: custom
 
 config:
     <<: *configDefault
